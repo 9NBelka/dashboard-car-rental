@@ -1,5 +1,5 @@
 .panel {
-  width: 18vw;
+  width: 20vw;
   flex-shrink: 0;
   background: var(--bg-panel-raised);
   border: 0.01vw solid var(--border-subtle);
@@ -27,14 +27,34 @@
       line-height: var(--font-lineh-small);
     }
 
-    & .rentedTag {
+    & .panelTag {
       font-size: 0.55vw;
-      color: var(--accent-green);
+      color: var(--accent-orange);
       font-weight: var(--font-weight-smallStrong);
       line-height: var(--font-lineh-small);
-      background: #103321;
+      background: #3a2a10;
       padding: 0.3vw 0.6vw;
       border-radius: 1vw;
+
+      &.statusPositive {
+        background: #3a2a10;
+        color: var(--accent-orange);
+      }
+
+      &.statusAvailable {
+        background: #103321;
+        color: var(--accent-green);
+      }
+
+      &.statusWarning {
+        background: #2a1414;
+        color: var(--accent-red);
+      }
+
+      &.statusDanger {
+        background: var(--accent-blue-background);
+        color: var(--accent-blue);
+      }
     }
   }
 

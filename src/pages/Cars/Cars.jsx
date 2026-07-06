@@ -9,7 +9,7 @@ import CarPagination from './CarPagination/CarPagination';
 
 const STATUS_META = {
   rented: { label: 'В аренде', className: 'statusPositive' },
-  available: { label: 'Доступен', className: 'statusPositive' },
+  available: { label: 'Доступен', className: 'statusAvailable' },
   maintenance: { label: 'На обслуживании', className: 'statusWarning' },
   attention: { label: 'Требует внимания', className: 'statusDanger' },
 };

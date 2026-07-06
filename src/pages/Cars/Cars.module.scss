@@ -132,22 +132,27 @@
   font-weight: var(--font-weight-regular);
   line-height: var(--font-lineh-small2);
   padding: 0.25vw 0.7vw;
-  border-radius: 1vw;
+  border-radius: 0.35vw;
   white-space: nowrap;
 
   &.statusPositive {
+    background: #3a2a10;
+    color: var(--accent-orange);
+  }
+
+  &.statusAvailable {
     background: #103321;
     color: var(--accent-green);
   }
 
   &.statusWarning {
-    background: #3a2a10;
-    color: var(--accent-orange);
+    background: #2a1414;
+    color: var(--accent-red);
   }
 
   &.statusDanger {
-    background: #2a1414;
-    color: var(--accent-red);
+    background: var(--accent-blue-background);
+    color: var(--accent-blue);
   }
 }
 

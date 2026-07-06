@@ -10,9 +10,9 @@ import {
   LuMapPin,
   LuPhone,
   LuTriangleAlert,
-  LuCar,
 } from 'react-icons/lu';
 import styles from './CarDetailPanel.module.scss';
+import clsx from 'clsx';
 
 const TABS = ['Обзор', 'История', 'Документы', 'Обслуживание'];
 
@@ -27,7 +27,18 @@ export default function CarDetailPanel({ car, onClose }) {
             <h2 className={styles.panelTitle}>
               {car.brand} {car.model}
             </h2>
-            {car.status === 'rented' && <span className={styles.rentedTag}>В аренде</span>}
+            {car.status === 'rented' && (
+              <span className={clsx(styles.panelTag, styles.statusPositive)}>В аренде</span>
+            )}
+            {car.status === 'available' && (
+              <span className={clsx(styles.panelTag, styles.statusAvailable)}>Доступен</span>
+            )}
+            {car.status === 'maintenance' && (
+              <span className={clsx(styles.panelTag, styles.statusWarning)}>На обслуживании</span>
+            )}
+            {car.status === 'attention' && (
+              <span className={clsx(styles.panelTag, styles.statusDanger)}>Требует внимания</span>
+            )}
           </div>
           <div className={styles.panelPlate}>{car.plate}</div>
         </div>
