@@ -187,23 +187,23 @@
   margin-top: 0.15vw;
 }
 
-// .moreButton {
-//   background: transparent;
-//   border: none;
-//   color: var(--text-muted);
-//   cursor: pointer;
-//   padding: 0.2vw;
-//   transition: 0.2s ease-in-out;
+.moreButton {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 0vw;
+  transition: 0.2s ease-in-out;
 
-//   & .iconThreeDots {
-//     width: 0.75vw;
-//     height: 0.75vw;
-//   }
+  & .iconThreeDots {
+    width: 0.75vw;
+    height: 0.75vw;
+  }
 
-//   &:hover {
-//     color: var(--text-primary);
-//   }
-// }
+  &:hover {
+    color: var(--text-primary);
+  }
+}
 
 // .fuelCell {
 //   display: flex;

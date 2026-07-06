@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react';
-import { LuCar } from 'react-icons/lu';
 import { mockCars } from './mockCars';
 import CarDetailPanel from './CarDetailPanel/CarDetailPanel';
 import styles from './Cars.module.scss';
 import CarFilters from './CarFilters/CarFilters';
 import CarStats from './CarStats/CarStats';
 import CarPagination from './CarPagination/CarPagination';
+import { LuEllipsis } from 'react-icons/lu';
 
 const STATUS_META = {
   rented: { label: 'В аренде', className: 'statusPositive' },
@@ -106,11 +106,12 @@ export default function Cars() {
         <div className={styles.tableWrap}>
           <table className={styles.table}>
             <colgroup>
-              <col style={{ width: '28%' }} />
+              <col style={{ width: '25%' }} />
               <col style={{ width: '15%' }} />
-              <col style={{ width: '19%' }} />
-              <col style={{ width: '16%' }} />
-              <col style={{ width: '22%' }} />
+              <col style={{ width: '20%' }} />
+              <col style={{ width: '15%' }} />
+              <col style={{ width: '20%' }} />
+              <col style={{ width: '5%' }} />
             </colgroup>
             <thead>
               <tr>
@@ -202,21 +203,21 @@ export default function Cars() {
                       </div>
                     </td>
 
-                    {/* <td>
+                    <td>
                       <button
                         className={styles.moreButton}
                         type='button'
                         onClick={(e) => e.stopPropagation()}>
                         <LuEllipsis className={styles.iconThreeDots} />
                       </button>
-                    </td> */}
+                    </td>
                   </tr>
                 );
               })}
 
               {paginatedCars.length === 0 && (
                 <tr>
-                  <td colSpan={5} className={styles.emptyState}>
+                  <td colSpan={6} className={styles.emptyState}>
                     Ничего не найдено
                   </td>
                 </tr>
