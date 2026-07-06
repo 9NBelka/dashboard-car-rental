@@ -1,0 +1,331 @@
+.panel {
+  width: 18vw;
+  flex-shrink: 0;
+  background: var(--bg-panel-raised);
+  border: 0.01vw solid var(--border-subtle);
+  border-radius: 0.5vw;
+  padding: 1vw;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55vw;
+}
+
+.panelHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  & .panelTitleRow {
+    display: flex;
+    align-items: center;
+    gap: 0.6vw;
+
+    & .panelTitle {
+      font-size: 1vw;
+      color: var(--text-primary);
+      font-weight: var(--font-weight-bold);
+      line-height: var(--font-lineh-small);
+    }
+
+    & .rentedTag {
+      font-size: 0.55vw;
+      color: var(--accent-green);
+      font-weight: var(--font-weight-smallStrong);
+      line-height: var(--font-lineh-small);
+      background: #103321;
+      padding: 0.3vw 0.6vw;
+      border-radius: 1vw;
+    }
+  }
+
+  & .panelPlate {
+    font-size: 0.65vw;
+    color: var(--text-muted);
+    font-family: 'Courier New', monospace;
+    font-weight: var(--font-weight-regular);
+    line-height: var(--font-lineh-small);
+    margin-top: 0.2vw;
+  }
+
+  & .closeButton {
+    display: flex;
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    cursor: pointer;
+    padding: 0;
+    transition: 0.2s ease-in-out;
+
+    &:hover {
+      color: var(--text-primary);
+    }
+
+    & .closeButtonIcon {
+      width: 0.85vw;
+      height: 0.85vw;
+    }
+  }
+}
+
+.carPhoto {
+  height: 8.5vw;
+  border-radius: 0.5vw;
+  background: var(--bg-hover);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  overflow: hidden;
+
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 55%;
+  }
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.2vw;
+  border-bottom: 0.01vw solid var(--border-subtle);
+
+  & .tab {
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 0.6vw;
+    padding: 0.2vw 0.5vw;
+    cursor: pointer;
+    border-bottom: 0.1vw solid transparent;
+
+    &.tabActive {
+      color: var(--accent-blue);
+      border-bottom-color: var(--accent-blue);
+    }
+  }
+}
+
+.tabPlaceholder {
+  padding: 2vw 0;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.65vw;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4vw;
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.65vw;
+  color: var(--text-primary);
+  font-weight: var(--font-weight-smallStrong);
+  line-height: var(--font-lineh-small);
+
+  & .linkAction {
+    font-size: 0.6vw;
+    color: var(--accent-blue);
+    font-weight: var(--font-weight-smallStrong);
+    line-height: var(--font-lineh-small);
+  }
+
+  & .liveTag {
+    font-size: 0.55vw;
+    color: var(--accent-green);
+    font-weight: var(--font-weight-smallStrong);
+    line-height: var(--font-lineh-small);
+  }
+}
+
+.address {
+  display: flex;
+  align-items: center;
+  gap: 0.2vw;
+  font-size: 0.55vw;
+  color: var(--text-secondary);
+
+  & .addressIcon {
+    width: 0.65vw;
+    height: 0.65vw;
+  }
+}
+
+.mapPreview {
+  height: 5vw;
+  border-radius: 0.5vw;
+  background: var(--bg-app);
+  border: 0.01vw solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.65vw;
+}
+
+.mapSvg {
+  width: 100%;
+  height: 100%;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.4vw;
+
+  & .statBox {
+    background: var(--bg-app);
+    border: 0.01vw solid var(--border-subtle);
+    border-radius: 0.5vw;
+    padding: 0.6vw 0.6vw;
+
+    & .statBoxLabel {
+      display: flex;
+      align-items: center;
+      gap: 0.35vw;
+      font-size: 0.55vw;
+      color: var(--text-muted);
+      font-weight: var(--font-weight-smallStrong);
+      line-height: var(--font-lineh-small);
+
+      & .statIcon {
+        width: 0.65vw;
+        height: 0.65vw;
+      }
+    }
+
+    & .statBoxValue {
+      font-size: 0.75vw;
+      color: var(--text-primary);
+      font-weight: var(--font-weight-smallStrong);
+      line-height: var(--font-lineh-small);
+      display: flex;
+      align-items: center;
+      gap: 0.25vw;
+      margin-top: 0.4vw;
+
+      & .dotOn,
+      & .dotOff {
+        width: 0.4vw;
+        height: 0.4vw;
+        border-radius: 50%;
+        display: inline-block;
+      }
+
+      & .dotOn {
+        background: var(--accent-green);
+      }
+      & .dotOff {
+        background: var(--text-muted);
+      }
+    }
+  }
+}
+
+.driverRow {
+  display: flex;
+  gap: 0.5vw;
+  background: var(--bg-app);
+  border-radius: 0.5vw;
+  padding: 0.6vw 0.6vw;
+  margin-top: 0.15vw;
+
+  & .driverInfo {
+    flex: 1;
+
+    & .driverName {
+      font-size: 0.6vw;
+      color: var(--text-primary);
+      font-weight: var(--font-weight-smallStrong);
+      line-height: var(--font-lineh-small);
+    }
+
+    & .driverContact {
+      display: flex;
+      align-items: center;
+      gap: 0.25vw;
+      font-size: 0.6vw;
+      font-weight: var(--font-weight-regular);
+      line-height: var(--font-lineh-small);
+      color: var(--text-muted);
+      margin-top: 0.5vw;
+
+      & .driverIcon {
+        width: 0.65vw;
+        height: 0.65vw;
+      }
+    }
+  }
+
+  & .rentDates {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.55vw;
+    color: var(--text-muted);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--font-lineh-small);
+    text-align: right;
+
+    & .rentDatesValue {
+      color: var(--text-secondary);
+      margin-top: 0.2vw;
+      margin-bottom: 0.5vw;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.noNotifications {
+  font-size: 0.55vw;
+  color: var(--text-muted);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--font-lineh-small);
+}
+
+.notificationRow {
+  display: flex;
+  gap: 0.4vw;
+  align-items: flex-start;
+  padding: 0.5vw 0;
+  border-top: 0.01vw solid var(--border-subtle);
+
+  & .notificationIcon {
+    color: var(--accent-red);
+    flex-shrink: 0;
+    width: 0.65vw;
+    height: 0.65vw;
+    margin-top: 0.2vw;
+  }
+
+  & .notificationTitle {
+    font-size: 0.6vw;
+    color: var(--text-primary);
+    font-weight: var(--font-weight-smallStrong);
+    line-height: var(--font-lineh-small);
+  }
+
+  & .notificationDetail {
+    font-size: 0.55vw;
+    color: var(--text-muted);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--font-lineh-small);
+    margin-top: 0.25vw;
+  }
+
+  & .notificationTime {
+    font-size: 0.55vw;
+    color: var(--text-muted);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--font-lineh-small);
+    white-space: nowrap;
+    margin-left: auto;
+  }
+}

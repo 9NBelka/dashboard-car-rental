@@ -1,0 +1,230 @@
+.carsPage {
+  display: flex;
+  gap: 0.75vw;
+  align-items: flex-start;
+}
+
+.carsMain {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75vw;
+}
+
+.carsTitle {
+  font-size: 1.4vw;
+  color: var(--text-primary);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--font-lineh-normal);
+}
+
+.carsSubtitle {
+  margin-top: 0.2vw;
+  font-size: 0.65vw;
+  color: var(--text-secondary);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--font-lineh-normal);
+}
+
+.tableWrap {
+  background: var(--bg-panel-solid);
+  border: 0.01vw solid var(--border-subtle);
+  border-radius: 0.5vw;
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+
+  th {
+    text-align: left;
+    font-size: 0.6vw;
+    color: var(--text-primary);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--font-lineh-small2);
+    padding: 0.65vw 0.8vw;
+    border-bottom: 0.01vw solid var(--border-subtle);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  td {
+    padding: 0.5vw 0.8vw;
+    border-bottom: 0.01vw solid var(--border-subtle);
+    font-size: 0.6vw;
+    color: var(--text-secondary);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--font-lineh-small2);
+    vertical-align: middle;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  tbody tr {
+    cursor: pointer;
+
+    &:hover {
+      background: var(--bg-hover);
+    }
+
+    &:last-child td {
+      border-bottom: none;
+    }
+  }
+}
+
+.rowSelected {
+  background: var(--accent-blue-bg);
+
+  &:hover {
+    background: var(--accent-blue-bg);
+  }
+}
+
+.carCell {
+  display: flex;
+  align-items: center;
+  gap: 0.5vw;
+}
+
+.carThumb {
+  width: 2vw;
+  height: 2vw;
+  border-radius: 0.5vw;
+  background: var(--bg-hover);
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  & img {
+    border-radius: 0.5vw;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+.carName {
+  font-size: 0.6vw;
+  color: var(--text-primary);
+  font-weight: var(--font-weight-smallStrong);
+  line-height: var(--font-lineh-small2);
+}
+
+.carPlate {
+  font-size: 0.6vw;
+  font-family: 'Courier New', monospace;
+  color: var(--text-muted);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--font-lineh-small2);
+  margin-top: 0.1vw;
+}
+
+.statusBadge {
+  font-size: 0.55vw;
+  font-weight: var(--font-weight-regular);
+  line-height: var(--font-lineh-small2);
+  padding: 0.25vw 0.7vw;
+  border-radius: 1vw;
+  white-space: nowrap;
+
+  &.statusPositive {
+    background: #103321;
+    color: var(--accent-green);
+  }
+
+  &.statusWarning {
+    background: #3a2a10;
+    color: var(--accent-orange);
+  }
+
+  &.statusDanger {
+    background: #2a1414;
+    color: var(--accent-red);
+  }
+}
+
+.rentDriverName {
+  font-size: 0.6vw;
+  color: var(--text-primary);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--font-lineh-small2);
+  margin-top: 0.15vw;
+}
+
+.rentMeta {
+  font-size: 0.55vw;
+  color: var(--text-muted);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--font-lineh-small2);
+  margin-top: 0.15vw;
+}
+
+.dash {
+  font-size: 0.55vw;
+  color: var(--text-muted);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--font-lineh-small2);
+}
+
+.speedMeta {
+  font-size: 0.6vw;
+  color: var(--accent-blue);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--font-lineh-small2);
+  margin-top: 0.15vw;
+}
+
+// .moreButton {
+//   background: transparent;
+//   border: none;
+//   color: var(--text-muted);
+//   cursor: pointer;
+//   padding: 0.2vw;
+//   transition: 0.2s ease-in-out;
+
+//   & .iconThreeDots {
+//     width: 0.75vw;
+//     height: 0.75vw;
+//   }
+
+//   &:hover {
+//     color: var(--text-primary);
+//   }
+// }
+
+// .fuelCell {
+//   display: flex;
+//   flex-direction: column;
+//   gap: 6px;
+//   min-width: 90px;
+// }
+
+// .fuelBarTrack {
+//   height: 4px;
+//   border-radius: 999px;
+//   background: var(--border-subtle);
+//   overflow: hidden;
+// }
+
+// .fuelBarFill {
+//   height: 100%;
+//   border-radius: 999px;
+// }
+
+// .fuelBarGood {
+//   background: var(--accent-green);
+// }
+// .fuelBarMedium {
+//   background: var(--accent-orange);
+// }
+// .fuelBarLow {
+//   background: var(--accent-red);
+// }

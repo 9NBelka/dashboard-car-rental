@@ -1,0 +1,92 @@
+.sidebar {
+  width: 10.5vw;
+  flex-shrink: 0;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  background: var(--bg-panel-solid);
+  border-right: 0.01vw solid var(--border-subtle);
+  display: flex;
+  flex-direction: column;
+  padding: 1vw 0.65vw;
+  overflow-y: auto;
+
+  & .sidebarBrand {
+    display: flex;
+    align-items: center;
+    gap: 0.5vw;
+    padding: 0.5vw 0vw;
+
+    & .sidebarBrandIcon {
+      width: 1.75vw;
+      height: 1.75vw;
+      border-radius: 0.5vw;
+      background: var(--accent-blue-bg);
+      color: var(--accent-blue);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+
+      & .icon {
+        width: 1vw;
+        height: 1vw;
+      }
+    }
+
+    & .sidebarBrandTitle {
+      font-size: 0.75vw;
+      color: var(--text-primary);
+      font-weight: var(--font-weight-smallStrong);
+      line-height: var(--font-lineh-small2);
+    }
+
+    & .sidebarBrandSubtitle {
+      font-size: 0.6vw;
+      color: var(--text-muted);
+      font-weight: var(--font-weight-regular);
+      line-height: var(--font-lineh-small2);
+    }
+  }
+}
+
+.sidebarNav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25vw;
+  margin-top: 1vw;
+
+  & .sidebarLink {
+    display: flex;
+    align-items: center;
+    gap: 0.5vw;
+    padding: 0.55vw 0.55vw;
+    border-radius: 0.5vw;
+    font-size: 0.65vw;
+    color: var(--text-secondary);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--font-lineh-small2);
+    transition: 0.15s ease-in-out;
+
+    &:hover {
+      background: var(--bg-hover);
+      color: var(--text-primary);
+    }
+
+    &.sidebarLinkActive {
+      background: var(--accent-blue-bg);
+      color: var(--accent-blue);
+    }
+
+    & .sidebarLinkIcon {
+      width: 0.75vw;
+      height: 0.75vw;
+      flex-shrink: 0;
+    }
+
+    & .sidebarLinkLabel {
+      flex: 1;
+      white-space: nowrap;
+    }
+  }
+}

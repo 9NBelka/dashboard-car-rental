@@ -1,0 +1,11 @@
+.dashboardLayout {
+  display: flex;
+  min-height: 100vh;
+  background: var(--bg-app);
+}
+
+.dashboardLayoutContent {
+  flex: 1;
+  min-width: 0;
+  padding: 1.1vw 1.4vw;
+}

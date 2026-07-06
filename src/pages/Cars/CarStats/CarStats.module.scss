@@ -1,0 +1,88 @@
+.statsRow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75vw;
+}
+
+.statCard {
+  background: var(--bg-panel-raised);
+  padding: 0.75vw;
+  border-radius: 0.5vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  &.statBlue {
+    background: var(--accent-blue-background);
+
+    & .statLabel {
+      color: var(--accent-blue);
+    }
+
+    & .statIcon {
+      color: var(--accent-blue);
+    }
+  }
+  &.statGreen {
+    background: var(--accent-green-background);
+
+    & .statLabel {
+      color: var(--accent-green);
+    }
+
+    & .statIcon {
+      color: var(--accent-green);
+    }
+  }
+  &.statOrange {
+    background: var(--accent-orange-background);
+
+    & .statLabel {
+      color: var(--accent-orange);
+    }
+
+    & .statIcon {
+      color: var(--accent-orange);
+    }
+  }
+  &.statRed {
+    background: var(--accent-red-background);
+
+    & .statLabel {
+      color: var(--accent-red);
+    }
+
+    & .statIcon {
+      color: var(--accent-red);
+    }
+  }
+}
+
+.statLabel {
+  font-size: 0.65vw;
+  color: var(--text-secondary);
+  font-weight: var(--font-weight-smallStrong);
+  line-height: var(--font-lineh-normal);
+}
+
+.statValue {
+  font-size: 1.2vw;
+  color: var(--text-primary);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--font-lineh-normal);
+  margin-top: 0.2vw;
+}
+
+.statMeta {
+  font-size: 0.55vw;
+  color: var(--text-muted);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--font-lineh-normal);
+  margin-top: 0.2vw;
+}
+
+.statIcon {
+  width: 1vw;
+  height: 1vw;
+  flex-shrink: 0;
+}

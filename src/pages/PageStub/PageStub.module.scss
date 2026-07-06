@@ -1,0 +1,36 @@
+.pageStubHeader {
+  margin-bottom: 1vw;
+}
+
+.pageStubTitle {
+  font-size: 1.4vw;
+  color: var(--text-primary);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--font-lineh-normal);
+}
+
+.pageStubSubtitle {
+  margin-top: 0.2vw;
+  font-size: 0.65vw;
+  color: var(--text-secondary);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--font-lineh-normal);
+}
+
+.pageStubBody {
+  min-height: 20vw;
+}
+
+.pageStubEmpty {
+  height: 20vw;
+  border: 0.01vw dashed var(--border-subtle);
+  border-radius: 0.75vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-panel-raised);
+  font-size: 0.65vw;
+  color: var(--text-muted);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--font-lineh-normal);
+}
