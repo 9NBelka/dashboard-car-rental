@@ -34,15 +34,15 @@
       color: var(--accent-green);
     }
   }
-  &.statOrange {
-    background: var(--accent-orange-background);
+  &.statCyan {
+    background: var(--accent-cyan-background);
 
     & .statLabel {
-      color: var(--accent-orange);
+      color: var(--accent-cyan-another);
     }
 
     & .statIcon {
-      color: var(--accent-orange);
+      color: var(--accent-cyan-another);
     }
   }
   &.statRed {

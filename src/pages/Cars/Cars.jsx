@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react';
 import { mockCars } from './mockCars';
-import CarDetailPanel from './CarDetailPanel/CarDetailPanel';
+import CarDetailPanel from '../../components/CarsComponents/CarDetailPanel/CarDetailPanel';
 import styles from './Cars.module.scss';
-import CarFilters from './CarFilters/CarFilters';
-import CarStats from './CarStats/CarStats';
-import CarPagination from './CarPagination/CarPagination';
-import { LuEllipsis } from 'react-icons/lu';
+import CarFilters from '../../components/CarsComponents/CarFilters/CarFilters';
+import CarStats from '../../components/CarsComponents/CarStats/CarStats';
+import CarPagination from '../../components/CarsComponents/CarPagination/CarPagination';
+import MoreButton from '../../components/CarsComponents/MoreButton/MoreButton';
 
 const STATUS_META = {
   rented: { label: 'В аренде', className: 'statusPositive' },
@@ -44,8 +44,9 @@ function buildPageList(current, total) {
 export default function Cars() {
   const [search, setSearch] = useState('');
   const [statusFilter, setStatusFilter] = useState('all');
-  const [selectedId, setSelectedId] = useState(mockCars[0].id);
+  const [selectedId, setSelectedId] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
+  const [openMenuId, setOpenMenuId] = useState(null);
 
   const total = mockCars.length;
   const availableCount = mockCars.filter((c) => c.status === 'available').length;
@@ -110,8 +111,8 @@ export default function Cars() {
               <col style={{ width: '15%' }} />
               <col style={{ width: '20%' }} />
               <col style={{ width: '15%' }} />
-              <col style={{ width: '20%' }} />
-              <col style={{ width: '5%' }} />
+              <col style={{ width: '15%' }} />
+              <col style={{ width: '10%' }} />
             </colgroup>
             <thead>
               <tr>
@@ -204,12 +205,7 @@ export default function Cars() {
                     </td>
 
                     <td>
-                      <button
-                        className={styles.moreButton}
-                        type='button'
-                        onClick={(e) => e.stopPropagation()}>
-                        <LuEllipsis className={styles.iconThreeDots} />
-                      </button>
+                      <MoreButton openMenuId={openMenuId} setOpenMenuId={setOpenMenuId} car={car} />
                     </td>
                   </tr>
                 );

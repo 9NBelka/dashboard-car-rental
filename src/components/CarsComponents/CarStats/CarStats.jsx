@@ -4,7 +4,7 @@ import styles from './CarStats.module.scss';
 export default function CarStats({ total, availableCount, rentedCount, maintenanceCount }) {
   return (
     <div className={styles.statsRow}>
-      <div className={`${styles.statCard} ${styles.statBlue}`}>
+      <div className={`${styles.statCard} ${styles.statCyan}`}>
         <div>
           <div className={styles.statLabel}>Всего автомобилей</div>
           <div className={styles.statValue}>{total}</div>
@@ -18,13 +18,13 @@ export default function CarStats({ total, availableCount, rentedCount, maintenan
           <div className={styles.statLabel}>Доступно</div>
           <div className={styles.statValue}>{availableCount}</div>
           <div className={styles.statMeta}>
-            {Math.round((availableCount / total) * 100)}% автопарка
+            {total > 0 ? Math.round((availableCount / total) * 100) : 0}% автопарка
           </div>
         </div>
         <LuCircleCheck className={styles.statIcon} />
       </div>
 
-      <div className={`${styles.statCard} ${styles.statOrange}`}>
+      <div className={`${styles.statCard}  ${styles.statBlue}`}>
         <div>
           <div className={styles.statLabel}>В аренде</div>
           <div className={styles.statValue}>{rentedCount}</div>

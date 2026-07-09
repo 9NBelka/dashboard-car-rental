@@ -1,0 +1,63 @@
+.actionsCell {
+  position: relative;
+  // display: inline-block;
+}
+
+.actionsMenu {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0.75vw;
+  left: -0.5vw;
+  right: 0;
+  z-index: 20;
+  background: var(--bg-panel-solid);
+  border: 0.01vw solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 0.3vw;
+  box-shadow: 0 0.4vw 1vw rgba(0, 0, 0, 0.4);
+  max-height: 12vw;
+  overflow-y: auto;
+  border-radius: 0.5vw;
+  gap: 0.25vw;
+}
+
+.actionsMenuItem {
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.2vw 0.5vw;
+  border-radius: 0.5vw;
+  font-size: 0.55vw;
+  color: var(--text-secondary);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--font-lineh-small2);
+
+  &:hover {
+    background: var(--bg-hover);
+    color: var(--text-primary);
+  }
+}
+
+.actionsMenuItemDanger {
+  color: var(--accent-red);
+}
+
+.moreButton {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 0vw;
+  transition: 0.2s ease-in-out;
+
+  & .iconThreeDots {
+    width: 0.75vw;
+    height: 0.75vw;
+  }
+
+  &:hover {
+    color: var(--text-primary);
+  }
+}

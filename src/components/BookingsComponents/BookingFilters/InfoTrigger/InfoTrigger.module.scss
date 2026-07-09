@@ -1,0 +1,90 @@
+.infoTrigger {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: help;
+}
+
+.iconInfo {
+  width: 1vw;
+  height: 1vw;
+}
+
+.tooltip {
+  position: absolute;
+  top: calc(100% + 0.75vw);
+  left: 0;
+  z-index: 30;
+  width: 12vw;
+  padding: 0.75vw;
+  background: #1c2340;
+  border: 0.01vw solid #262c47;
+  border-radius: 0.5vw;
+  box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.4);
+
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-0.2vw);
+  transition:
+    opacity 0.15s ease,
+    transform 0.15s ease,
+    visibility 0.15s;
+  pointer-events: none;
+}
+
+.infoTrigger:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.tooltipTitle {
+  font-size: 0.55vw;
+  color: var(--text-primary);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--font-lineh-small2);
+}
+
+.tooltipRow {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15vw;
+  margin-top: 0.5vw;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.tooltipBadge {
+  align-self: flex-start;
+  font-size: 0.5vw;
+  font-weight: var(--font-weight-smallStrong);
+  padding: 0.25vw 0.4vw;
+  line-height: var(--font-lineh-small);
+  border-radius: 1vw;
+}
+
+.badgeConfirmed {
+  background: var(--accent-blue-background);
+  color: var(--accent-blue);
+}
+.badgeActive {
+  background: #103321;
+  color: var(--accent-green);
+}
+.badgeCompleted {
+  background: #3a2a10;
+  color: var(--accent-orange);
+}
+.badgeCancelled {
+  background: #2a1414;
+  color: var(--accent-red);
+}
+
+.tooltipText {
+  font-size: 0.55vw;
+  color: #a3a9c2;
+  font-weight: var(--font-weight-regular);
+  line-height: var(--font-lineh-normal);
+}

@@ -37,8 +37,8 @@
       border-radius: 1vw;
 
       &.statusPositive {
-        background: #3a2a10;
-        color: var(--accent-orange);
+        background: var(--accent-blue-background);
+        color: var(--accent-blue);
       }
 
       &.statusAvailable {
@@ -52,8 +52,8 @@
       }
 
       &.statusDanger {
-        background: var(--accent-blue-background);
-        color: var(--accent-blue);
+        background: #3a2a10;
+        color: var(--accent-orange);
       }
     }
   }
