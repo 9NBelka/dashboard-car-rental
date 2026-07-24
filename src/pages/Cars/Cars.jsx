@@ -107,9 +107,10 @@ export default function Cars() {
         <div className={styles.tableWrap}>
           <table className={styles.table}>
             <colgroup>
-              <col style={{ width: '25%' }} />
-              <col style={{ width: '15%' }} />
               <col style={{ width: '20%' }} />
+              <col style={{ width: '15%' }} />
+              <col style={{ width: '15%' }} />
+              <col style={{ width: '15%' }} />
               <col style={{ width: '15%' }} />
               <col style={{ width: '15%' }} />
               <col style={{ width: '10%' }} />
@@ -120,7 +121,7 @@ export default function Cars() {
                 <th>Статус</th>
                 <th>Аренда</th>
                 <th>Пробег</th>
-                {/* <th>Топливо</th> */}
+                <th>Топливо</th>
                 <th>Местоположение</th>
                 <th />
               </tr>
@@ -173,7 +174,7 @@ export default function Cars() {
                       </div>
                     </td>
 
-                    {/* <td>
+                    <td>
                       {car.fuelLevel != null ? (
                         <div className={styles.fuelCell}>
                           <span>{car.fuelLevel}%</span>
@@ -187,7 +188,7 @@ export default function Cars() {
                       ) : (
                         <span className={styles.dash}>—</span>
                       )}
-                    </td> */}
+                    </td>
 
                     <td>
                       <div className={styles.locationCell}>

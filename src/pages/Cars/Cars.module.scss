@@ -188,31 +188,31 @@
   margin-top: 0.15vw;
 }
 
-// .fuelCell {
-//   display: flex;
-//   flex-direction: column;
-//   gap: 6px;
-//   min-width: 90px;
-// }
+.fuelCell {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25vw;
+  min-width: 4vw;
+}
 
-// .fuelBarTrack {
-//   height: 4px;
-//   border-radius: 999px;
-//   background: var(--border-subtle);
-//   overflow: hidden;
-// }
+.fuelBarTrack {
+  height: 0.15vw;
+  border-radius: 999px;
+  background: var(--border-subtle);
+  overflow: hidden;
+}
 
-// .fuelBarFill {
-//   height: 100%;
-//   border-radius: 999px;
-// }
+.fuelBarFill {
+  height: 100%;
+  border-radius: 999px;
+}
 
-// .fuelBarGood {
-//   background: var(--accent-green);
-// }
-// .fuelBarMedium {
-//   background: var(--accent-orange);
-// }
-// .fuelBarLow {
-//   background: var(--accent-red);
-// }
+.fuelBarGood {
+  background: var(--accent-green);
+}
+.fuelBarMedium {
+  background: var(--accent-orange);
+}
+.fuelBarLow {
+  background: var(--accent-red);
+}

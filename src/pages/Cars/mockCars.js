@@ -12,7 +12,7 @@ export const mockCars = [
     rentEnd: '25 мая 2024, 18:00',
     mileageTotal: 84250,
     mileageToday: 152,
-    // fuelLevel: 78,
+    fuelLevel: 78,
     location: {
       city: 'Madrid',
       country: 'Испания',
@@ -40,7 +40,7 @@ export const mockCars = [
     rentEnd: null,
     mileageTotal: 67890,
     mileageToday: 0,
-    // fuelLevel: 61,
+    fuelLevel: 61,
     location: {
       city: 'Barcelona',
       country: 'Испания',
@@ -66,7 +66,7 @@ export const mockCars = [
     rentEnd: '24 мая 2024, 14:00',
     mileageTotal: 45230,
     mileageToday: 210,
-    // fuelLevel: 45,
+    fuelLevel: 45,
     location: {
       city: 'Valencia',
       country: 'Испания',
@@ -92,7 +92,7 @@ export const mockCars = [
     rentEnd: null,
     mileageTotal: 92100,
     mileageToday: 0,
-    // fuelLevel: null,
+    fuelLevel: null,
     location: { city: 'Madrid', country: 'Испания', address: 'Сервис центр, Madrid' },
     speed: null,
     ignition: false,
@@ -114,7 +114,7 @@ export const mockCars = [
     rentEnd: null,
     mileageTotal: 38765,
     mileageToday: 0,
-    // fuelLevel: 55,
+    fuelLevel: 55,
     location: {
       city: 'Sevilla',
       country: 'Испания',
@@ -144,7 +144,7 @@ export const mockCars = [
     rentEnd: '26 мая 2024, 10:00',
     mileageTotal: 73450,
     mileageToday: 98,
-    // fuelLevel: 67,
+    fuelLevel: 67,
     location: {
       city: 'Zaragoza',
       country: 'Испания',
@@ -170,7 +170,7 @@ export const mockCars = [
     rentEnd: null,
     mileageTotal: 56300,
     mileageToday: 0,
-    // fuelLevel: 33,
+    fuelLevel: 33,
     location: { city: 'Bilbao', country: 'Испания', address: 'Gran Vía, 15, 48001 Bilbao, España' },
     speed: null,
     ignition: false,
@@ -194,7 +194,7 @@ export const mockCars = [
     rentEnd: null,
     mileageTotal: 29150,
     mileageToday: 0,
-    // fuelLevel: 72,
+    fuelLevel: 72,
     location: {
       city: 'Malaga',
       country: 'Испания',
@@ -220,7 +220,7 @@ export const mockCars = [
     rentEnd: '26 мая 2024, 12:00',
     mileageTotal: 33760,
     mileageToday: 92,
-    // fuelLevel: 40,
+    fuelLevel: 40,
     location: {
       city: 'Alicante',
       country: 'Испания',
@@ -246,7 +246,7 @@ export const mockCars = [
     rentEnd: null,
     mileageTotal: 41005,
     mileageToday: 0,
-    // fuelLevel: 65,
+    fuelLevel: 65,
     location: {
       city: 'Murcia',
       country: 'Испания',
@@ -272,7 +272,7 @@ export const mockCars = [
     rentEnd: null,
     mileageTotal: 41005,
     mileageToday: 0,
-    // fuelLevel: 65,
+    fuelLevel: 65,
     location: {
       city: 'Murcia',
       country: 'Испания',
@@ -298,7 +298,7 @@ export const mockCars = [
     rentEnd: null,
     mileageTotal: 41005,
     mileageToday: 0,
-    // fuelLevel: 65,
+    fuelLevel: 65,
     location: {
       city: 'Murcia',
       country: 'Испания',
@@ -324,7 +324,7 @@ export const mockCars = [
     rentEnd: null,
     mileageTotal: 41005,
     mileageToday: 0,
-    // fuelLevel: 65,
+    fuelLevel: 65,
     location: {
       city: 'Murcia',
       country: 'Испания',
@@ -350,7 +350,7 @@ export const mockCars = [
     rentEnd: null,
     mileageTotal: 41005,
     mileageToday: 0,
-    // fuelLevel: 65,
+    fuelLevel: 65,
     location: {
       city: 'Murcia',
       country: 'Испания',
@@ -376,7 +376,7 @@ export const mockCars = [
     rentEnd: null,
     mileageTotal: 41005,
     mileageToday: 0,
-    // fuelLevel: 65,
+    fuelLevel: 65,
     location: {
       city: 'Murcia',
       country: 'Испания',

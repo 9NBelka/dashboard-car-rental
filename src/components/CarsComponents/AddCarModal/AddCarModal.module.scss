@@ -1,0 +1,193 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  padding: 2vw;
+}
+
+.modal {
+  width: 42vw;
+  max-width: 50vw;
+  max-height: 90vh;
+  background: var(--bg-panel-solid);
+  border: 0.01vw solid var(--border-subtle);
+  border-radius: 0.6vw;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.modalHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1vw 1.2vw;
+  border-bottom: 0.01vw solid var(--border-subtle);
+}
+
+.modalTitle {
+  font-size: 1vw;
+  font-weight: var(--font-weight-bold);
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.closeButton {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 0.2vw;
+  transition: 0.2s ease-in-out;
+
+  &:hover {
+    color: var(--text-primary);
+  }
+}
+
+.closeButtonIcon {
+  width: 1vw;
+  height: 1vw;
+  display: block;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.formBody {
+  padding: 1.2vw;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2vw;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6vw;
+}
+
+.sectionTitle {
+  font-size: 0.7vw;
+  font-weight: var(--font-weight-bold);
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.7vw;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3vw;
+
+  label {
+    font-size: 0.6vw;
+    color: var(--text-secondary);
+  }
+
+  input {
+    background: var(--bg-panel-raised);
+    border: 0.01vw solid var(--border-subtle);
+    color: var(--text-primary);
+    font-size: 0.65vw;
+    padding: 0.5vw 0.6vw;
+    border-radius: 0.5vw;
+    line-height: var(--font-lineh-small2);
+
+    &::placeholder {
+      color: var(--text-muted);
+    }
+
+    &:focus {
+      outline: none;
+      border-color: var(--accent-blue);
+    }
+  }
+}
+
+.fieldFull {
+  grid-column: 1 / -1;
+}
+
+.formFooter {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.6vw;
+  padding: 1vw 1.2vw;
+  border-top: 0.01vw solid var(--border-subtle);
+}
+
+.cancelButton,
+.submitButton {
+  font-size: 0.65vw;
+  padding: 0.5vw 0.6vw;
+  line-height: var(--font-lineh-small2);
+  cursor: pointer;
+  border-radius: 0.5vw;
+}
+
+.cancelButton {
+  background: var(--bg-panel-raised);
+  border: 0.01vw solid var(--border-subtle);
+  color: var(--text-secondary);
+
+  &:hover {
+    color: var(--text-primary);
+  }
+}
+
+.submitButton {
+  background: var(--accent-blue-another);
+  border: 0.01vw solid var(--accent-blue);
+  color: white;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 0.4vw;
+  height: 0.4vw;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(120, 120, 120, 0.35);
+  border-radius: 999px;
+  border: 0.1vw solid transparent;
+  background-clip: content-box;
+  transition: 0.2s ease-in-out;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-primary);
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(120, 120, 120, 0.35) transparent;
+}
